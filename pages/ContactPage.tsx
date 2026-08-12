@@ -10,9 +10,10 @@ const ContactPage: React.FC<ContactPageProps> = () => {
     const { t } = useTranslations();
 
     return (
-        <div className="bg-transparent min-h-screen font-sans">
+        <div className="relative min-h-screen font-sans">
+            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{ backgroundImage: 'url(/images/logo4.jpeg)' }} />
             {/* Header */}
-            <div className="bg-slate-900 text-white py-16">
+            <div className="relative bg-slate-900/95 text-white py-16 backdrop-blur-sm">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-3xl md:text-5xl font-extrabold mb-4">تماس با آرام تاکسی</h1>
                     <p className="text-slate-400 max-w-2xl mx-auto">
