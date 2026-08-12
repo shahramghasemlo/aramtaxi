@@ -11,7 +11,7 @@ const ContactPage: React.FC<ContactPageProps> = () => {
 
     return (
         <div className="relative min-h-screen font-sans">
-            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{ backgroundImage: 'url(/images/logo4.jpeg)' }} />
+            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style={{ backgroundImage: 'url(/images/logo4.jpeg)' }} />
             {/* Header */}
             <div className="relative bg-slate-900/95 text-white py-16 backdrop-blur-sm">
                 <div className="container mx-auto px-4 text-center">
