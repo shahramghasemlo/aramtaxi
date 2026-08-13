@@ -1,13 +1,25 @@
-import React from 'react';
-import { useTranslations } from '../hooks/useTranslations';
+import React, { useEffect, useState } from 'react';
 import { Page } from '../types';
 
 interface AboutPageProps {
   onNavigate?: (page: Page) => void;
 }
 
+const aboutImages = [
+  { src: '/images/logo5.jpeg', alt: 'آرام تاکسی' },
+  { src: '/images/camry-taxi-interior.jpg', alt: 'کابین تاکسی آرام تاکسی' },
+];
+
 const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
-  const { t } = useTranslations();
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImageIndex((prev) => (prev + 1) % aboutImages.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="bg-transparent font-sans">
@@ -94,11 +106,18 @@ const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
 
           <div className="relative">
             <div className="absolute -inset-4 bg-amber-200 rounded-3xl transform rotate-2"></div>
-            <img
-              src="/aram_taxi/images/camry-taxi-interior.jpg"
-              alt="Professional Service"
-              className="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover transform transition-transform duration-500 hover:scale-[1.01]"
-            />
+            <div className="relative rounded-2xl shadow-2xl w-full h-[500px] overflow-hidden">
+              {aboutImages.map((image, index) => (
+                <img
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+                    index === activeImageIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
+            </div>
             {/* Stats Overlay */}
             <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl max-w-xs">
               <div className="flex items-center gap-4 mb-4 border-b border-gray-100 pb-4">
