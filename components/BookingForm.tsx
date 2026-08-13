@@ -103,6 +103,13 @@ const BookingForm: React.FC<{ isQuickForm?: boolean }> = ({ isQuickForm = false 
           />
         </div>
 
+        <div className="md:col-span-2">
+          <p className="text-[13px] text-[#FFC107]/90 flex items-center gap-2">
+            <span>✓</span>
+            <span>{t('free_cancellation_note')}</span>
+          </p>
+        </div>
+
         {/* Row 4 */}
         <div>
           <label htmlFor="passengers" className="block text-[14px] font-medium text-[#BDBDBD] mb-2">{t('passengers')}</label>

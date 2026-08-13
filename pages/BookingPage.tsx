@@ -34,7 +34,7 @@ const BookingPage: React.FC = () => {
             <div className="hidden md:block w-px h-4 bg-amber-300"></div>
             <div className="flex items-center gap-2">
               <span>✓</span>
-              <span className="font-bold">کنسلی رایگان</span>
+              <span className="font-bold">کنسلی رایگان ۵ ساعت قبل ساعت حرکت</span>
             </div>
             <div className="hidden md:block w-px h-4 bg-amber-300"></div>
             <div className="flex items-center gap-2">

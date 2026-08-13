@@ -26,6 +26,7 @@ export const translations: Translations = {
   address_placeholder: { [Language.FA]: 'خیابان، کوچه، پلاک...', [Language.EN]: 'Street, building number...' },
   flight_date: { [Language.FA]: 'تاریخ پرواز', [Language.EN]: 'Flight Date' },
   flight_time: { [Language.FA]: 'ساعت حرکت', [Language.EN]: 'Departure Time' },
+  free_cancellation_note: { [Language.FA]: 'کنسلی رایگان ۵ ساعت قبل ساعت حرکت', [Language.EN]: 'Free cancellation up to 5 hours before departure time' },
   car_type: { [Language.FA]: 'نوع خودرو', [Language.EN]: 'Vehicle Type' },
   car_safrane: { [Language.FA]: 'رنو سفران', [Language.EN]: 'Renault Safrane' },
   car_camry: { [Language.FA]: 'تویوتا کمری', [Language.EN]: 'Toyota Camry' },
