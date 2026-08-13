@@ -65,7 +65,7 @@ const App: React.FC = () => {
 
   return (
     <LanguageProvider>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen min-h-[100dvh] overflow-x-hidden">
         <Header activePage={activePage} onNavigate={handleNavigate} />
         <main className="flex-grow">
           {renderPage()}

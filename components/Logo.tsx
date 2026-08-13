@@ -12,10 +12,10 @@ const Logo: React.FC<LogoProps> = ({ onNavigate }) => {
     const isRTL = language === 'fa';
   
   return (
-    <button onClick={() => onNavigate(Page.Home)} className="text-2xl md:text-3xl font-bold tracking-tight text-slate-800 transition-colors hover:text-blue-600">
-      <div className="flex items-center gap-2">
-        <span className={isRTL ? 'font-bold' : 'font-light'}>آرام تاکسی</span>
-        <span className="text-slate-400 font-sans text-xl md:text-2xl">Aram Taxi</span>
+    <button onClick={() => onNavigate(Page.Home)} className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-[#FFFFFF] transition-colors hover:text-[#FFC107] max-w-full">
+      <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+        <span className={`truncate ${isRTL ? 'font-bold' : 'font-light'}`}>آرام تاکسی</span>
+        <span className="hidden sm:inline text-[#BDBDBD] font-sans text-base md:text-xl whitespace-nowrap">Aram Taxi</span>
       </div>
     </button>
   );

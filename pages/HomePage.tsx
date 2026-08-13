@@ -32,7 +32,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   return (
     <div className="bg-transparent">
       {/* Hero Section with Video Background */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative min-h-[100dvh] sm:min-h-screen overflow-hidden">
         {/* Video Background */}
         <video
           autoPlay
@@ -50,7 +50,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         {/* Hero Content */}
         <div className="relative h-full flex flex-col">
           <div className="flex-1 flex items-center justify-center">
-            <div className="text-center px-4 -mt-80">
+            <div className="text-center px-4 pt-24 sm:pt-32 md:-mt-20">
               {/* Small uppercase label */}
               <p className="text-[14px] font-semibold text-[#BDBDBD] tracking-wider mb-4 uppercase">
                 {t('hero_label') || 'AIRPORT TAXI'}

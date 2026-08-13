@@ -26,18 +26,18 @@ const BookingPage: React.FC = () => {
       <div className="container mx-auto px-4 py-8 md:py-16 -mt-10 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Trust Indicators */}
-          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-amber-900">
-            <div className="flex items-center gap-2">
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 text-sm text-amber-900 text-center">
+            <div className="flex items-center justify-center gap-2">
               <span>✓</span>
               <span className="font-bold">تضمین کمترین قیمت</span>
             </div>
             <div className="hidden md:block w-px h-4 bg-amber-300"></div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               <span>✓</span>
               <span className="font-bold">کنسلی رایگان ۵ ساعت قبل ساعت حرکت</span>
             </div>
             <div className="hidden md:block w-px h-4 bg-amber-300"></div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               <span>✓</span>
               <span className="font-bold">پشتیبانی ۲۴ ساعته</span>
             </div>

@@ -107,12 +107,12 @@ const QuickAction: React.FC<{ icon: string; label: string; onClick: () => void }
 const TabButton: React.FC<{ active: boolean; label: string; icon: string; onClick: () => void }> = ({ active, label, icon, onClick }) => (
   <button
     onClick={onClick}
-    className={`flex items-center gap-3 px-6 py-4 rounded-[16px] transition-colors min-h-[56px] ${
-      active ? 'bg-[#FFC107] text-[#121212]' : 'text-[#BDBDBD] hover:bg-[#1E1E1E] hover:text-[#FFFFFF]'
+    className={`flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-2 px-1 sm:px-4 py-2 sm:py-3 rounded-[12px] sm:rounded-[16px] transition-colors min-h-[56px] flex-1 min-w-0 ${
+      active ? 'bg-[#FFC107] text-[#121212]' : 'text-[#BDBDBD] hover:bg-[#2A2A2A] hover:text-[#FFFFFF]'
     }`}
   >
-    <span className="text-[24px]">{icon}</span>
-    <span className="font-medium text-[16px]">{label}</span>
+    <span className="text-[20px] sm:text-[24px] leading-none">{icon}</span>
+    <span className="font-medium text-[10px] sm:text-[14px] leading-tight text-center truncate w-full">{label}</span>
   </button>
 );
 
@@ -528,8 +528,8 @@ const AdminPage: React.FC<{ onNavigate: (page: Page) => void }> = ({ onNavigate 
       </div>
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 right-0 bg-[#1E1E1E] border-t border-[#333333] px-4 py-2 pb-safe">
-        <div className="flex justify-around">
+      <div className="fixed bottom-0 left-0 right-0 z-[100] bg-[#1E1E1E] border-t border-[#333333] px-2 sm:px-4 py-2 pb-safe">
+        <div className="flex gap-1 sm:gap-2 max-w-3xl mx-auto">
           <TabButton
             active={activeTab === 'dashboard'}
             label="داشبورد"

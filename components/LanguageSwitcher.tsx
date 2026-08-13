@@ -14,7 +14,7 @@ const LanguageSwitcher: React.FC = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 bg-slate-100 rounded-md transition-all"
+      className="px-3 py-2 text-sm font-medium text-[#FFFFFF] bg-[#333333] hover:bg-[#444444] rounded-[12px] transition-all min-h-[44px]"
     >
       {language === Language.FA ? 'English' : 'فارسی'}
     </button>
